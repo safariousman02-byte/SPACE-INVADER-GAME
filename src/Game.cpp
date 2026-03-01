@@ -40,6 +40,8 @@ Game::Update() {
         break;
 
         case PLAYING: 
+
+            player.Update();
             
             if (IsKeyDown(KEY_P)) {
 
@@ -118,6 +120,10 @@ void DrawMenu() {
 }
 
 void DrawGame() {
+
+    player.Draw();
+
+    DrawText("USE, LEFT OR RIGHT ARROW TO MOVE JET", 10, 10, 20, GRAY );
 
     DrawText("GAMEPLAY ACTIVE", 10, 10, 20, RED);
     DrawText("PRESS 'P' TO PAUSE", 10, 40, 20, GRAY);
